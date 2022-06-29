@@ -171,7 +171,7 @@ def main():
 		tweet_text = st.text_area("Enter Text","Type a Tweet Here")
         
 		if st.button("Classify"):
-			if tweet_text == "Type a Tweet Here":
+			if tweet_text == "Type a Tweet Here" or tweet_text =="":
 				st.success("Please enter a tweet to classify")
 			else:
 			# Transforming user input with vectorizer
@@ -201,7 +201,7 @@ def main():
 			# When model has successfully run, will print prediction
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
-			if tweet_text != "Type a Tweet Here":
+			if tweet_text != "Type a Tweet Here" and tweet_text != "":
 				if prediction == 1:
 					st.success("This tweet supports the belief of man-made climate change")
 				if prediction == -1:
